@@ -3,56 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Palmira Solochi - Portfólio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0d1117;
-      color: #e6edf3;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 { color: #58a6ff; }
-    a {
-      color: #f0f6fc;
-      text-decoration: none;
-      border: 1px solid #58a6ff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    a:hover {
-      background-color: #58a6ff;
-      color: #0d1117;
-    }
-  </style>
+  <title>Palmira Solochi · Portfólio</title>
+  <meta name="description" content="QA Profissional e Programadora em formação (COBOL, Mainframe, Backend Java). Portfólio e contactos." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <img src="assets/banner-palmira.png" alt="Banner Palmira Solochi" width="100%" />
-  <h1>👩‍💻 Palmira Solochi</h1>
-  <p>QA Profissional | Programadora em formação (COBOL, Mainframe, Backend Java)</p>
-  <p>📍 Portugal | 💬 Inglês Intermédio | 🇫🇷 Francês Técnico Básico</p>
+  <div class="container">
+    <section class="hero">
+      <img src="assets/banner-palmira.png" alt="Banner Palmira Solochi - QA & Mainframe" />
+      <div class="header">
+        <h1>👩‍💻 Palmira Solochi</h1>
+        <p>QA Profissional · Programadora em formação (COBOL, Mainframe, Backend Java)</p>
+        <div class="badges">
+          <span class="badge">🇵🇹 Português Nativo</span>
+          <span class="badge">🇬🇧 Inglês Intermédio</span>
+          <span class="badge">🇫🇷 Francês Técnico Básico</span>
+        </div>
+      </div>
+    </section>
 
-  <hr style="margin: 30px 0;">
+    <section class="section">
+      <h2>🌱 Sobre mim</h2>
+      <p>Transição de carreira do <strong>Direito</strong> para a <strong>Tecnologia</strong>, unindo análise rigorosa, clareza de comunicação e foco na qualidade. Formação concluída em <strong>Quality Assurance (QA)</strong> com experiência em testes manuais e automatizados (Selenium, Cypress, Cucumber, BDD). Atualmente a aprofundar <strong>COBOL, Mainframe, Java</strong> e <strong>Segurança</strong>.</p>
+    </section>
 
-  <h2>🌱 Sobre mim</h2>
-  <p>
-    Transição de carreira do Direito para a área da Tecnologia.  
-    Formada em QA, atualmente estudo COBOL, Mainframe, Java e Segurança de Software.
-  </p>
+    <section class="section">
+      <h2>🛠️ Tecnologias</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Mainframe & Backend</h3>
+          <p>COBOL · JCL · TSO/ISPF · Zowe · SQL · DB2</p>
+        </div>
+        <div class="card">
+          <h3>QA & Automatização</h3>
+          <p>Selenium · Cypress · Cucumber · Gherkin · BDD · Jira · Xray · OWASP ZAP · Postman</p>
+        </div>
+        <div class="card">
+          <h3>Web & Linguagens</h3>
+          <p>Java · ASP.NET Core MVC · JavaScript · Git · GitHub · VS Code</p>
+        </div>
+      </div>
+    </section>
 
-  <hr style="margin: 30px 0;">
+    <section class="section">
+      <h2>📂 Projetos em Destaque</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>💼 Sistema de Gestão de Contas (Mainframe)</h3>
+          <p>Backend bancário simulado com jobs JCL e dados em DB2.</p>
+          <a class="button" href="https://github.com/Pssolochi82" target="_blank" rel="noopener">Ver no GitHub</a>
+        </div>
+        <div class="card">
+          <h3>🌐 WebApp de Consulta de Clientes</h3>
+          <p>Interface web ligada a base de dados para pesquisa e gestão.</p>
+          <a class="button" href="https://github.com/Pssolochi82" target="_blank" rel="noopener">Ver no GitHub</a>
+        </div>
+        <div class="card">
+          <h3>🧪 Testes de Segurança em APIs</h3>
+          <p>Validação e hardening com Postman e OWASP ZAP.</p>
+          <a class="button" href="https://github.com/Pssolochi82" target="_blank" rel="noopener">Ver no GitHub</a>
+        </div>
+        <div class="card">
+          <h3>✅ Testes Automatizados (BDD)</h3>
+          <p>Cenários Gherkin e Cucumber, automação com Selenium e Cypress.</p>
+          <a class="button" href="https://github.com/Pssolochi82" target="_blank" rel="noopener">Ver no GitHub</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>📂 Meus Projetos</h2>
-  <p><a href="https://github.com/Pssolochi82/ContaBancariaJS">💼 Conta Bancária JS</a></p>
-  <p><a href="https://github.com/Pssolochi82/BatalhaNaval-C">🚢 Batalha Naval em C</a></p>
+    <section class="section">
+      <h2>📫 Contacto</h2>
+      <p><a class="button" href="mailto:palmirasolochi@email.com">Enviar email</a>
+      <a class="button" href="https://www.linkedin.com/in/palmira-solochi-79a1a3317" target="_blank" rel="noopener">LinkedIn</a></p>
+    </section>
 
-  <hr style="margin: 30px 0;">
-
-  <h2>📫 Contacto</h2>
-  <p><a href="mailto:palmirasolochi@email.com">palmirasolochi@email.com</a></p>
-  <p><a href="https://www.linkedin.com/in/palmira-solochi-79a1a3317">LinkedIn</a></p>
-
-  <p style="margin-top:40px;"><em>“Tecnologia com responsabilidade e propósito.”</em></p>
+    <p class="footer"><em>“Tecnologia com responsabilidade e propósito.”</em></p>
+  </div>
 </body>
 </html>
