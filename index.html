@@ -2,114 +2,207 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Palmira Solochi · Portfólio</title>
-  <meta name="description" content="QA Profissional e Programadora em formação (COBOL, Mainframe, Backend Java). Portfólio e contactos." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Palmira Solochi – Portfólio</title>
+  <style>
+    /* ====== Tema base (escuro elegante) ====== */
+    :root{
+      --bg:#0d1117;
+      --panel:#0f141b;
+      --panel-2:#0b1016;
+      --text:#e6edf3;
+      --muted:#9aa7b5;
+      --line:#1f2630;
+      --brand:#58a6ff;
+      --brand-2:#388bfd;
+      --ok:#3fb950;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg); color:var(--text);
+    }
+    img{max-width:100%; display:block}
+
+    /* ====== Layout ====== */
+    .header-img{width:100%; max-height:320px; object-fit:cover}
+    .wrap{max-width:1024px; margin:0 auto; padding:24px 16px 48px}
+    header{padding:16px 0 8px}
+    .title{
+      text-align:center; margin:8px 0 4px; font-size:clamp(28px,4vw,40px);
+      color:var(--brand); font-weight:800; letter-spacing:.2px;
+    }
+    .subtitle{ text-align:center; color:var(--muted); margin-bottom:6px }
+    .badges{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:8px }
+    .badge{border:1px solid var(--line); color:var(--text); padding:6px 10px; border-radius:999px; font-size:14px}
+
+    /* separador */
+    .hr{ height:1px; background:var(--line); margin:28px 0 }
+
+    /* ====== Secções ====== */
+    .section-title{
+      display:flex; align-items:center; gap:10px; font-size:clamp(22px,3vw,28px);
+      margin:8px 0 18px; font-weight:800;
+    }
+    .section-title .dot{
+      width:10px; height:10px; border-radius:50%; background:var(--brand);
+      box-shadow:0 0 0 6px rgba(88,166,255,.15);
+    }
+    .lead{ color:var(--text); background:linear-gradient(180deg,var(--panel),var(--panel-2));
+      border:1px solid var(--line); border-radius:14px; padding:18px; line-height:1.6 }
+
+    /* ====== Grid de projetos ====== */
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card{
+      background:linear-gradient(180deg,var(--panel),var(--panel-2));
+      border:1px solid var(--line); border-radius:16px; overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.18);
+      display:flex; flex-direction:column; min-height:100%;
+    }
+    .card-media{ aspect-ratio: 16/9; background:#0a0f15; display:flex; align-items:center; justify-content:center; color:#7da7ff; font-size:40px }
+    .card-body{ padding:16px }
+    .card h3{ margin:0 0 8px; font-size:18px }
+    .card p{ margin:0 0 14px; color:var(--muted) }
+    .chip{ display:inline-block; font-size:12px; border:1px solid var(--line); padding:4px 8px; border-radius:999px; margin-right:6px }
+    .actions{ display:flex; gap:10px; padding:0 16px 16px; margin-top:auto }
+    .btn{
+      flex:1; text-align:center; text-decoration:none; font-weight:700;
+      padding:10px 12px; border-radius:10px; border:1px solid var(--brand); color:var(--text);
+      background:transparent; transition:.2s;
+    }
+    .btn:hover{ background:var(--brand); color:#0d1117 }
+    .btn.sec{ border-color:var(--line) }
+    .btn.sec:hover{ border-color:var(--brand); color:var(--brand) }
+
+    /* ====== Rodapé ====== */
+    footer{ text-align:center; color:var(--muted); margin-top:32px; font-size:14px }
+
+    /* ====== Acessibilidade ====== */
+    a:focus, button:focus{ outline:none; box-shadow:0 0 0 3px rgba(88,166,255,.35) inset; border-radius:10px }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <section class="hero">
-      <img src="assets/banner-palmira.png" alt="Banner Palmira Solochi - QA & Mainframe" />
-      <div class="header">
-        <h1>👩‍💻 Palmira Solochi</h1>
-        <p>QA Profissional · Programadora em formação (COBOL, Mainframe, Backend Java)</p>
-        <div class="badges">
-          <span class="badge">🇵🇹 Português Nativo</span>
-          <span class="badge">🇬🇧 Inglês Intermédio</span>
-          <span class="badge">🇫🇷 Francês Técnico Básico</span>
-        </div>
+
+  <!-- Banner topo (mantém o teu arquivo em assets/) -->
+  <img class="header-img" src="assets/banner-palmira.png" alt="Banner Palmira Solochi">
+
+  <div class="wrap">
+    <header>
+      <h1 class="title">👩‍💻 Palmira Solochi</h1>
+      <p class="subtitle">QA Profissional · Programadora em formação (COBOL, Mainframe, Backend Java)</p>
+      <div class="badges">
+        <span class="badge">🇵🇹 Portugal</span>
+        <span class="badge">💬 Inglês Intermédio</span>
+        <span class="badge">🇫🇷 Francês Técnico Básico</span>
       </div>
-    </section>
+    </header>
 
-    <section class="section">
-      <h2>🌱 Sobre mim</h2>
-      <p>Transição de carreira do <strong>Direito</strong> para a <strong>Tecnologia</strong>, unindo análise rigorosa, clareza de comunicação e foco na qualidade. Formação concluída em <strong>Quality Assurance (QA)</strong> com experiência em testes manuais e automatizados (Selenium, Cypress, Cucumber, BDD). Atualmente a aprofundar <strong>COBOL, Mainframe, Java</strong> e <strong>Segurança</strong>.</p>
-    </section>
+    <div class="hr"></div>
 
-    <section class="section">
-      <h2>🛠️ Tecnologias</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Mainframe & Backend</h3>
-          <p>COBOL · JCL · TSO/ISPF · Zowe · SQL · DB2</p>
-        </div>
-        <div class="card">
-          <h3>QA & Automatização</h3>
-          <p>Selenium · Cypress · Cucumber · Gherkin · BDD · Jira · Xray · OWASP ZAP · Postman</p>
-        </div>
-        <div class="card">
-          <h3>Web & Linguagens</h3>
-          <p>Java · ASP.NET Core MVC · JavaScript · Git · GitHub · VS Code</p>
-        </div>
-      </div>
-    </section>
+    <!-- Sobre mim -->
+    <h2 class="section-title"><span class="dot"></span>Sobre mim</h2>
+    <p class="lead">
+      Transição de carreira do Direito para a Tecnologia. Formada em QA, atualmente estudo COBOL, Mainframe,
+      Java e Segurança de Software. Valorizo o método, a clareza e o software bem testado.
+    </p>
 
-    <section class="section">
-  <h2>📂 Projetos em Destaque</h2>
-  <div class="grid">
-    <!-- BatalhaNaval-C -->
-<div class="card">
-  <h3>🚢 BatalhaNaval-C</h3>
-  <p>Projeto em <strong>C</strong> que recria o clássico jogo <em>Batalha Naval</em> com matrizes 6×6. Desenvolvido como exercício de lógica e manipulação de arrays bidimensionais.</p>
-  <a class="button" href="https://github.com/Pssolochi82/BatalhaNaval-C" target="_blank" rel="noopener">Abrir repositório</a>
+    <div class="hr"></div>
+
+    <!-- Projetos -->
+    <h2 class="section-title"><span class="dot"></span>Meus Projetos</h2>
+
+    <div class="grid">
+      <!-- Card: Clínica -->
+      <article class="card">
+        <!-- se tiveres a imagem, troca o bloco abaixo por: <img class="card-media" src="assets/clinica-banner.png" alt="Clínica Esperança – Projeto PHP + MySQL"> -->
+        <div class="card-media" aria-hidden="true">🏥</div>
+        <div class="card-body">
+          <h3>Clínica Esperança — Projeto PHP + MySQL</h3>
+          <p>CRUD completo de funcionários com upload de fotografias, interface clínica e README profissional. Projeto em contexto de aula (IEFP 2025).</p>
+          <div class="chips">
+            <span class="chip">PHP</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">CRUD</span>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Pssolochi82/Clinica_PHP_MySQL" target="_blank" rel="noopener">🔗 Ver no GitHub</a>
+        </div>
+      </article>
+
+      <!-- Card: Conta Bancária JS -->
+      <article class="card">
+        <div class="card-media" aria-hidden="true">💼</div>
+        <div class="card-body">
+          <h3>Conta Bancária JS</h3>
+          <div class="actions">
+  <a class="btn" href="https://github.com/Pssolochi82/ContaBancariaJS" target="_blank" rel="noopener">🔗 Ver no GitHub</a>
+  <a class="btn sec" href="https://pssolochi82.github.io/ContaBancariaJS/" target="_blank" rel="noopener">▶️ Ver demo online</a>
 </div>
 
-    <!-- ContaBancariaJS -->
-    <div class="card">
-      <h3>💼 ContaBancariaJS</h3>
-      <p>Simulação completa de uma aplicação bancária com <strong>frontend em HTML/CSS/JavaScript</strong> e <strong>backend em Node.js + Express + SQLite</strong>. Permite realizar depósitos, levantamentos e consultas de saldo.</p>
-      <a class="button" href="https://github.com/Pssolochi82/ContaBancariaJS" target="_blank" rel="noopener">Abrir repositório</a>
-      <!-- Se ativares GitHub Pages nesse projeto, ativa esta linha: -->
-     <a class="button" href="https://pssolochi82.github.io/ContaBancariaJS" target="_blank" rel="noopener">Ver demo online</a> 
+
+          <p>Simulador de operações bancárias em JavaScript, com regras de negócio simples e foco em lógica.</p>
+          <div class="chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Lógica</span>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Pssolochi82/ContaBancariaJS" target="_blank" rel="noopener">🔗 Ver no GitHub</a>
+        </div>
+      </article>
+
+      <!-- Card: Batalha Naval em C -->
+      <article class="card">
+        <div class="card-media" aria-hidden="true">🚢</div>
+        <div class="card-body">
+          <h3>Batalha Naval em C</h3>
+          <p>Implementação clássica do jogo com matrizes e aleatoriedade, trabalhando ponteiros e estruturas.</p>
+          <div class="chips">
+            <span class="chip">C</span>
+            <span class="chip">Algoritmos</span>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Pssolochi82/BatalhaNaval-C" target="_blank" rel="noopener">🔗 Ver no GitHub</a>
+        </div>
+      </article>
     </div>
 
-    <!-- Perfil Profissional -->
-<div class="card">
-  <h3>📘 Pssolochi82</h3>
-  <p>Repositório especial do perfil profissional e portfólio técnico. Contém o README personalizado, banner e layout do GitHub Pages.</p>
-  <a class="button" href="https://github.com/Pssolochi82/Pssolochi82" target="_blank" rel="noopener">Abrir repositório</a>
-</div>
+    <div class="hr"></div>
 
-
-    <!-- TestLab -->
-    <div class="card">
-      <h3>🧪 TestLab – QA Automation</h3>
-      <p>Projeto de testes automatizados com <strong>Cypress</strong>, <strong>Selenium</strong> e <strong>BDD (Cucumber/Gherkin)</strong>. Inclui relatórios de execução e integração com Jira/Xray.</p>
-      <a class="button" href="https://github.com/Pssolochi82/TestLab" target="_blank" rel="noopener">Abrir repositório</a>
-      <!-- Quando publicares relatórios em Pages: -->
-     <a class="button" href="https://pssolochi82.github.io/TestLab" target="_blank" rel="noopener">Ver relatório/demonstração</a> 
+   <article class="card">
+  <div class="card-media" aria-hidden="true">🧪</div>
+  <div class="card-body">
+    <h3>TestLab — QA Automation</h3>
+    <p>Projeto de testes automatizados com <strong>Cypress, Selenium</strong> e BDD (Cucumber/Gherkin). Inclui relatórios de execução e integração com Jira/Xray.</p>
+    <div class="chips">
+      <span class="chip">QA</span>
+      <span class="chip">Cypress</span>
+      <span class="chip">Selenium</span>
+      <span class="chip">BDD</span>
     </div>
   </div>
-</section>
-
-
-
-   <section class="section">
-  <h2>📫 Contacto</h2>
-  <p>
-    <a class="button" href="mailto:psolochi2016@gmail.com">Enviar email</a>
-    <a class="button" href="https://www.linkedin.com/in/palmira-solochi-79a1a3317" target="_blank" rel="noopener">LinkedIn</a>
-  </p>
-</section>
+  <div class="actions">
+    <a class="btn" href="https://github.com/Pssolochi82/TestLab-QA" target="_blank" rel="noopener">🔗 Abrir repositório</a>
+    <a class="btn sec" href="https://pssolochi82.github.io/TestLab-QA/" target="_blank" rel="noopener">📄 Ver relatório/demonstração</a>
+  </div>
+</article>
  
 
-    <p class="footer"><em>“Tecnologia com responsabilidade e propósito.”</em></p>
-  </div>
-  <footer class="footer">
-  <p>🌷 Desenvolvido por <strong>Palmira Solochi</strong></p>
-  <div class="social">
-    <a href="mailto:psolochi2016@gmail.com" title="Enviar e-mail">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" />
-    </a>
-    <ahref="https://www.linkedin.com/in/palmira-solochi-79a1a3317" target="_blank" title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
-    </a>
-    <ahref="https://github.com/Pssolochi82" target="_blank" title="GitHub">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
-    </a>
-  </div>
-</footer>
+    <!-- Contactos -->
+    <h2 class="section-title"><span class="dot"></span>Contacto</h2>
+    <div class="lead" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+      <a class="btn sec" href="mailto:palmirasolochi@email.com">✉️ E-mail</a>
+      <a class="btn sec" href="https://www.linkedin.com/in/palmira-solochi-79a1a3317" target="_blank" rel="noopener">🔗 LinkedIn</a>
+      <a class="btn sec" href="https://github.com/Pssolochi82" target="_blank" rel="noopener">🐙 GitHub</a>
+    </div>
 
+    <footer>© Palmira Solochi — Tecnologia com responsabilidade e propósito.</footer>
+  </div>
 </body>
 </html>
